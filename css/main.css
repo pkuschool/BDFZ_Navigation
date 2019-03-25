@@ -22,6 +22,7 @@ html{
 .large-plate{
     margin-bottom: 15px;
     margin-left: 5px;
+    margin-right: 0px;
 }
 .large-plate .img{
     height: 100px;
