@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/materialize.js"></script>
+    <script src="./js/go.js"></script>
 </head>
+
 <body class="red lighten-4" style="">
     <nav id="container" class="red darken-4">
         <div class="nav-wrapper red darken-4 center-align row" style="width:90%;margin: 0 auto">
-            <a href="#" class="centered col" ><img src="./img/BDFZ.png" style="margin-top:7px;width: 56.7px;height:50px;"></a>
+            <a href="#" class="centered col"><img src="./img/BDFZ.png"
+                    style="margin-top:7px;width: 50px;height:50px;"></a>
             <a href="#" class="nav-title centered col" style="font-size: 25px">BDFZ导航</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.ico" alt=""
+                            style="margin-top: 20px;" height="25px" width="25px"></a></li>
+                <li><a href="./about.html"><i class="material-icons">info</i></a></li>
+            </ul>
         </div>
     </nav>
     <div id="container" style="margin-top: 20px;margin-left: 40px;margin-right: 40px;">
         <div class="row">
             <div class="col s4 c_main">
-                <div class="btn blue lighten-1 white-text waves-ripple waves-effect">
-                    希悦
+                <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2"
+                    onclick="GoTo('https://bdfz.seiue.com')">
+                    <p class="large-plate">希悦</p>
                 </div>
             </div>
             <div class="col s4  c_main">
-                <div class="btn red darken-4 white-text waves-ripple waves-effect">
-                    官网
+                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_full z-depth-2"
+                    onclick="GoTo('http://www.pkuschool.edu.cn')">
+
+                    <img class="large-plate img" src="./img/BDFZ.png" height="100px" width="auto">
+                    <p class="large-plate">官网</p>
                 </div>
             </div>
             <div class="col s4  c_main">
-                <div class="btn orange darken-1 white-text waves-ripple waves-effect">
-                    Office 365
+                <div class="btn orange darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2"
+                    onclick="GoTo('https://portal.office.com')">
+                    <p class="large-plate">Office 365</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

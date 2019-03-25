@@ -1,3 +1,3 @@
 function GoTo(to_url){
-    window.open(to_url,)
+    window.open(to_url,'_blank');
 }
