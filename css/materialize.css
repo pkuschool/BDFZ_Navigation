@@ -2883,6 +2883,12 @@ ul.staggered-list li {
   }
 }
 
+@media only screen and (min-width: 993px) {/*customly altered*/
+  .hide-on-large-and-up {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 992px) {
   .hide-on-med-only {
     display: none !important;

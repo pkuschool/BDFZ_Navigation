@@ -21,8 +21,10 @@
 
 <body class="red lighten-4">
     <nav id="container" class="red darken-4">
-        <div class="nav-wrapper red darken-4 center-align row" style="margin: 0 auto">
-            <a href="#" class="nav-title centered col" style="font-size: 25px">BDFZ导航</a>
+        <div class="nav-wrapper red darken-4" style="margin: 0 auto">
+            <a href="#" class="brand-logo hide-on-med-and-up"><img src="./img/BDFZ.png"
+                    style="width: 45px;height:45px;margin-top: 5px;"></a>
+            <a href="#" class="brand-logo hide-on-small-and-down" style="font-size: 25px;margin-left: 20px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.ico" alt=""
                             style="margin-top: 20px;" height="25px" width="25px"></a></li>
@@ -31,12 +33,15 @@
         </div>
     </nav>
     <div class="container transparent centered">
+        <br class="hide-on-large-and-up" />
+        <button class="btn red darken-4 white-text waves-ripple waves-effect hide-on-large-and-up" onclick="history.back()"><i class="material-icons">home</i></button>
         <h1>关于</h1>
         <p>版本0.0.1</p>
         <p>本网站立志于成为北大附中同学与老师的浏览器主页。</p>
         <h1>开源</h1>
-        <p>此网站已在 <button class="black white-text waves-ripple waves-effect btn-small noround" onclick="gogithub()"> Github
-            </button><button class="white black-text waves-ripple waves-effect btn-small noround" onclick="gogithub()">
+        <p>此网站已在 <button class="black white-text waves-ripple waves-effect btn-small noround " onclick="gogithub()"> Github
+            </button><button class="white black-text waves-ripple waves-effect btn-small noround hide-on-small-and-down"
+                onclick="gogithub()">
                 pkuschool/BDFZ_Navigation </button> 以 MIT License 开源。</p>
     </div>
 
