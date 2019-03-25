@@ -2,4 +2,10 @@
     height: 150px;
     margin-left: 10px;
     border-radius: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.c_full{
+    width: inherit;
+    height: 150px;
 }
