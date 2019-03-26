@@ -1,6 +1,7 @@
 function GoTo(to_url){
     window.open(to_url,'_blank');
 }
+t=0;
 window.setInterval(uptime, 1000);
  function uptime() {
     var thedate = new Date;
@@ -44,6 +45,18 @@ window.setInterval(uptime, 1000);
      }else{
          secstring = thedate.getSeconds().toString();
      }
-    timelbl.innerHTML= thedate.getHours() + ':' + minstring + ":" +secstring;
-    datelbl.innerHTML= thedate.getMonth() + '月' + thedate.getDay() + '日，星期' + datestring;
+     if (document.body.clientWidth<=992){
+         timelbl.innerHTML = thedate.getHours() + ':' + minstring;
+         datelbl.innerHTML = '星期' + datestring;
+     }else{
+         timelbl.innerHTML= thedate.getHours() + ':' + minstring + ":" +secstring;
+         datelbl.innerHTML = thedate.getMonth() + '月' + thedate.getDay() + '日，星期' + datestring;
+     }
+
+
+ }
+ function clicktime(){
+     var timelbl1 = document.getElementById("time-desktop");
+    t=t+1;
+    if(t>=30){timelbl1.innerHTML='蛤？';t=0;}
  }
