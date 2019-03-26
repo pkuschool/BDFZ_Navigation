@@ -7,10 +7,29 @@ html{
     border-radius: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    margin-bottom: 10px;
+}
+.c_main_m {
+    height: 100px;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
 }
 .c_full{
     margin: 0, 0;
     height: 150px;
+    display: flex;
+    padding-bottom: 10px;
+    font-size: 30px;
+    flex-direction: row;
+    align-content: flex-start;
+    text-align: left;
+    align-items: flex-end;
+}
+.c_full_minus{
+    margin: 0, 0;
+    height: 100px;
     display: flex;
     padding-bottom: 10px;
     font-size: 30px;
@@ -26,6 +45,13 @@ html{
 }
 .img{
     height: 100px;margin-bottom: 15px;
+    width: auto;
+    margin-left: 5px;
+
+}
+.img_m{
+    height: 80px;
+    margin-bottom: 10px;
     width: auto;
     margin-left: 5px;
 
