@@ -14,6 +14,7 @@
 </head>
 
 <body class="red lighten-4" style="">
+
     <nav id="container" class="red darken-4">
         <div class="nav-wrapper red darken-4" style="">
             <a href="#" class="brand-logo hide-on-med-and-up"><img src="./img/BDFZ.png" style="width: 45px;height:45px;margin-top: 5px;"></a>
@@ -25,7 +26,8 @@
             </ul>
         </div>
     </nav>
-    <div id="container" style="margin-top: 20px;">
+    <canvas id="canvas" style="background-color: rgba(0,0,0,0)"> </canvas>
+    <div style="margin-top: 20px;position: relative;top:-700px">
         <div class="row hide-on-small-and-down"><!--Top 3, large-->
             <div class="col s4 c_main">
                 <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2"
@@ -43,7 +45,7 @@
             </div>
             <div class="col s4  c_main">
                 <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 office"
-                    onclick="GoTo('https://portal.office.com')" s>
+                    onclick="GoTo('https://portal.office.com')">
                     <img class="img" src="./img/office.png" height="100px" width="auto">
                     <p class="large-plate hide-on-small-and-down">Office 365</p>
                 </div>
@@ -67,13 +69,20 @@
             </div>
             <div class="col s12  c_main_m">
                 <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2 office"
-                    onclick="GoTo('https://portal.office.com')" s>
-                    <img class="img" src="./img/office.png" height="100px" width="auto">
+                    onclick="GoTo('https://portal.office.com')">
+                    <img class="img_m" src="./img/office.png" height="100px" width="auto">
                     <p class="large-plate">Office 365</p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+    	var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		canvas.width = document.documentElement.clientWidth - 20;
+		canvas.height = document.documentElement.clientHeight - 25;
+		ctx.fillRect(0,0,10,10);
+    </script>
 </body>
 
 </html>
