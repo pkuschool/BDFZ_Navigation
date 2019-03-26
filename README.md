@@ -22,3 +22,8 @@ The ultimate navigator for BDFZ.
 - @smallg0at - 项目发起人
 - @cxcxxx - 主要编辑者
 - @suenyu - idea
+
+## 如何加入核心 Contributor 名单
+成为核心 Contributor 可以使你拥有直接push的权限。
+
+加入方法：[mailto:liuyuchen1@i.pkuschoool.edu.cn 告知账号名称](mailto:liuyuchen1@i.pkuschoool.edu.cn)
