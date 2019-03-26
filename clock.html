@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>时钟 | BDFZ导航</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/materialize.js"></script>
+    <script src="./js/go.js"></script>
+</head>
+
+<body class="red darken-4 center centered center-align" style="display:flex; vertical-align: middle;flex-direction: column;align-items: center">
+    <div class="red-text text-lighten-4" style="align-self: center;margin-top: 10%;margin-bottom: 10%">
+        <p class="centered large dt" id="time-desktop" style="font-size: 175px;" ></p>
+        <p class="centered dt" id="date-desktop" style="font-size: 45px;"></p>
+        <script>
+            uptime();
+        </script>
+    </div>
+    <div class="row white-text">
+        <div class="col btn-floating btn-large waves-light waves-effect red" onclick="history.back()">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+</body>
+
+</html>
