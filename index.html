@@ -82,7 +82,21 @@
 		var ctx = canvas.getContext("2d");
 		canvas.width = document.documentElement.clientWidth - 20;
 		canvas.height = document.documentElement.clientHeight - 25;
-		ctx.fillRect(0,0,10,10);
+		var s=setInterval(function(){
+			ctx.fillRect(dx,dy,2,2);
+		},100)
+		function getc(x, y) {
+				var bbox = canvas.getBoundingClientRect()
+				return {
+					x : (x - bbox.left) * (canvas.width / bbox.width),
+					y : (y - bbox.top) * (canvas.height / bbox.height)
+				};
+			}
+		window.onmousemove = function(e) {
+			var c = getc(e.clientX, e.clientY);
+			dx = parseInt(c.x);
+			dy = parseInt(c.y);
+		}
     </script>
 </body>
 
