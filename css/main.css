@@ -21,14 +21,18 @@ html{
 }
 .large-plate{
     margin-bottom: 15px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-right: 0px;
 }
-.large-plate .img{
-    height: 100px;
+.img{
+    height: 100px;margin-bottom: 15px;
     width: auto;
+    margin-left: 5px;
 
 }
 .noround{
     border-radius: 0px;
+}
+.office{
+    background-color: #d83b01;
 }
