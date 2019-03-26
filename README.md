@@ -17,3 +17,8 @@ The ultimate navigator for BDFZ.
 - 请使用能让人看懂的JS变量名。
 - 有什么BUG/建议可以去开[issue](https://github.com/pkuschool/BDFZ_Navigation/issues)。
 - 本网站以静态html为主，等待有人真的开始写PHP。
+
+## Contributors & Acknowledgement
+- @smallg0at - 项目发起人
+- @cxcxxx - 主要编辑者
+- @suenyu - idea
