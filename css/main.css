@@ -27,6 +27,15 @@ html{
     text-align: left;
     align-items: flex-end;
 }
+.c_clock {
+    margin: 0, 0;
+    height: 150px;
+    display: flex;
+    padding-bottom: 10px;
+    font-size: 30px;
+    flex-direction: column;
+    vertical-align: middle;
+}
 .c_full_minus{
     margin: 0, 0;
     height: 100px;
@@ -61,4 +70,9 @@ html{
 }
 .office{
     background-color: #d83b01;
+}
+.dt{
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-top: 15px;
 }
