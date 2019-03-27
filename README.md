@@ -20,7 +20,7 @@ The ultimate navigator for BDFZ.
 
 ## Contributors & Acknowledgement
 - @smallg0at - 项目发起人
-- @cxchhh - 主要编辑者
+- @cxchhh(cxccxc) - 主要编辑者
 - @suenyu - idea
 
 ## 如何加入核心 Contributor 名单

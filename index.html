@@ -16,9 +16,9 @@
 <body class="red lighten-4">
 
     <nav id="container" class="red darken-4">
-        <div class="nav-wrapper red darken-4" >
-            <a href="#" id="logo" class="brand-logo"><img src="./img/BDFZ.png" style="width: 45px;height:45px;margin-top: 5px;"></a>
-            <a href="#" id="bdfznav" class="brand-logo hide-on-small-and-down" style="font-size: 25px;margin-left: 20px;">BDFZ导航</a>
+        <div class="nav-wrapper red darken-4" style="">
+            <a href="#" class="brand-logo hide-on-med-and-up"><img src="./img/BDFZ.png" style="width: 45px;height:45px;margin-top: 5px;"></a>
+            <a href="#" class="brand-logo hide-on-small-and-down titletxt" style="font-size: 25px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.ico" alt=""
                             style="margin-top: 20px;" height="25px" width="25px"></a></li>
@@ -26,7 +26,7 @@
             </ul>
         </div>
     </nav>
-    <div style="margin-top: 20px;position: relative;">
+    <div style="margin-top: 20px;" class="mainsection" id="top3">
         <div class="row hide-on-small-and-down"><!--Top 3, large-->
             <div class="col s4 c_main">
                 <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 hoverable zoom"
@@ -40,7 +40,10 @@
                     onclick="window.open('clock.html','_self')">
                     <p class="centered large dt" id="time-desktop" style="font-size: 75px;" onclick="clicktime()"></p>
                     <p class="centered dt" id="date-desktop"></p>
-                    <script>uptime();</script>
+                    <script>
+                        uptime();
+                        window.setInterval(uptime, 1000);
+                    </script>
                 </div>
             </div>
             <div class="col s4  c_main">
@@ -88,6 +91,18 @@
                         <p class="large-plate">悦实践</p>
                     </div>
                 </div>
+        </div>
+    </div>
+    <div class="mainsection centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto">
+        <div class="row center-align center centered" id="customarea" style="margin: 0 auto">
+            <div class="btn col white black-text customgrid hoverable waves-effect s2">
+                <img src="./img/webdef.png" class="gridimg">
+                <p class="gridtext">网站</p>
+            </div>
+            <div class="btn customgrid white col black-text plus hoverable waves-effect s2">
+                <img src="./img/plus.png" class="gridimg">
+                <p class="gridtext">添加</p>
+            </div>
         </div>
     </div>
 </body>
