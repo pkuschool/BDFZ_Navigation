@@ -2,7 +2,7 @@ function GoTo(to_url){
     window.open(to_url,'_blank');
 }
 t=0;
-window.setInterval(uptime, 1000);
+
  function uptime() {
     var thedate = new Date;
     var timelbl=document.getElementById("time-desktop");
@@ -45,7 +45,7 @@ window.setInterval(uptime, 1000);
      }else{
          secstring = thedate.getSeconds().toString();
      }
-     if (document.body.clientWidth<=992){
+     if (document.body.clientWidth<=1024){
          timelbl.innerHTML = thedate.getHours() + ':' + minstring;
          datelbl.innerHTML = '星期' + datestring;
      }else{
