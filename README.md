@@ -23,6 +23,10 @@ The ultimate navigator for BDFZ.
 - @cxchhh(cxccxc) - 主要编辑者
 - @suenyu - idea
 
+## 使用的库文件
+- [Materialize](https://github.com/Dogfalo/materialize)
+- [cookie-js](https://github.com/js-cookie/js-cookie)
+
 ## 如何加入核心 Contributor 名单
 成为核心 Contributor 可以使你拥有直接push的权限。
 
