@@ -12,6 +12,7 @@ The ultimate navigator for BDFZ.
 
 ## Contribute 准则
 - 所有较大的样式 Override，都放到 /css/main.css
+- materialize.css的更改必须与原脚本有关且具有泛用性。
 - 所有JS代码，都放到 /js/main.js，建议使用Function
 - 在开始编辑样式之前，请确认您已经阅读过 Materialize 的大多数 [documentation](materializecss.com/)。
 - 请使用能让人看懂的JS变量名。
