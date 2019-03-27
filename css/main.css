@@ -2,6 +2,25 @@ html{
     font-family: 'Segoe UI', 'Pingfang UI';
     font-weight: 300;
 }
+.zoom{
+    transition: height .5s;
+    transition: margin .5s;
+}
+.zoom:hover{
+    height:160px;
+    margin: -5px;
+    background-color: #2bb288;
+}
+.yue{
+    background-color: #2bb288;
+}
+#logo{
+    left: 25px;
+    display:block;
+}
+#bdfznav{
+    left: 60px;
+}
 .c_main{
     height: 150px;
     border-radius: 0px;

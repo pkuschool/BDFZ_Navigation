@@ -12,7 +12,7 @@ The ultimate navigator for BDFZ.
 
 ## Contribute 准则
 - 所有较大的样式 Override，都放到 /css/main.css
-- 所有JS代码，都放到 /js/go.js，建议使用Function
+- 所有JS代码，都放到 /js/main.js，建议使用Function
 - 在开始编辑样式之前，请确认您已经阅读过 Materialize 的大多数 [documentation](materializecss.com/)。
 - 请使用能让人看懂的JS变量名。
 - 有什么BUG/建议可以去开[issue](https://github.com/pkuschool/BDFZ_Navigation/issues)。
