@@ -16,7 +16,7 @@ The ultimate navigator for BDFZ.
 - 在开始编辑样式之前，请确认您已经阅读过 Materialize 的大多数 [documentation](materializecss.com/)。
 - 请使用能让人看懂的JS变量名。
 - 有什么BUG/建议可以去开[issue](https://github.com/pkuschool/BDFZ_Navigation/issues)。
-- 本网站以静态html为主，等待有人真的开始写PHP。
+- 本网站以静态html为主，预计不会加入PHP支持。
 
 ## Contributors & Acknowledgement
 - @smallg0at - 项目发起人
