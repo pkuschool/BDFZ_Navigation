@@ -123,3 +123,16 @@ html{
         margin-left: 20px;
     }
 }
+@media only screen and (min-width: 600px) and (max-width: 850px){
+    .gridhide{
+        display: none;
+    }
+}
+.clocktitle{
+    font-size: 75px;
+}
+@media only screen and (min-width: 600px) and (max-width: 760px) {
+    .clocktitle{
+        font-size: 55px;
+    }
+}

@@ -22,9 +22,8 @@
 <body class="grey lighten-3">
     <nav id="container" class="blue-grey darken-1">
         <div class="nav-wrapper blue-grey darken-1" style="margin: 0 auto">
-            <a href="#" class="brand-logo hide-on-med-and-up"><img src="./img/BDFZ.png"
-                    style="width: 45px;height:45px;margin-top: 5px;"></a>
-            <a href="#" class="brand-logo hide-on-small-and-down" style="font-size: 25px;margin-left: 20px;">BDFZ导航</a>
+
+            <a href="#" class="brand-logo" style="font-size: 25px;margin-left: 20px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt=""
                             style="margin-top: 20px;" height="25px" width="25px"></a></li>
@@ -38,7 +37,7 @@
         <br class="hide-on-large-and-up" />
         <button class="btn red darken-4 white-text waves-ripple waves-effect hide-on-large-and-up" onclick="history.back()"><i class="material-icons">home</i></button>
         <h1>关于</h1>
-        <p>版本0.0.1</p>
+        <p>版本 <script>document.write(version);</script></p>
         <p>本网站立志于成为北大附中同学与老师的浏览器主页。</p>
         <h1>开源</h1>
         <p>此网站已在 <button class="black white-text waves-ripple waves-effect btn-small noround " onclick="gogithub()"> Github
@@ -46,12 +45,18 @@
                 onclick="gogithub()">
                 pkuschool/BDFZ_Navigation </button> 以 MIT License 开源。</p>
         <h1>开源库使用</h1>
-        <p>本项目由于开源库的使用变得可能，以下是使用到的 Javascript Library：</p>
-        <li>
-            <ul><a href="https://github.com/js-cookie/js-cookie">js-cookie</a></ul>
-            <ul><a href="https://github.com/Dogfalo/materialize">Materialize</a></ul>
-        </li>
-        <p>我们对这些开源库的创建者表达衷心的感谢！</p>
+        <p>本项目由于开源库的使用变得可能，以下是本项目代码包括的 Javascript Library：（点击可以进入其项目地址）</p>
+        <div class="collection blue-grey" style="width: 50%;">
+            <a href="https://github.com/Dogfalo/materialize" class="collection-item">
+                <span class="new badge" data-badge-caption="已使用">已修改，</span>
+                Materialize
+            </a>
+            <a href="https://github.com/js-cookie/js-cookie" class="collection-item">
+                <span class="badge" data-badge-caption="未使用"></span>
+                js-cookie
+            </a>
+        </div>
+        <p>在此对这些开源库的创建者表示衷心的感谢！</p>
     </div>
 
 </body>

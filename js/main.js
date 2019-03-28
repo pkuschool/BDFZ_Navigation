@@ -1,3 +1,4 @@
+var version = "0.0.2";
 function GoTo(to_url) {
     window.open(to_url, '_blank');
 }
@@ -45,7 +46,7 @@ function uptime() {
     } else {
         secstring = thedate.getSeconds().toString();
     }
-    if (document.body.clientWidth <= 992) {
+    if (document.body.clientWidth <= 1125) {
         timelbl.innerHTML = thedate.getHours() + ':' + minstring;
         datelbl.innerHTML = '星期' + datestring;
     } else {
