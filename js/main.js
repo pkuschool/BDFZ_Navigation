@@ -50,7 +50,7 @@ function uptime() {
         datelbl.innerHTML = '星期' + datestring;
     } else {
         timelbl.innerHTML = thedate.getHours() + ':' + minstring + ":" + secstring;
-        datelbl.innerHTML = thedate.getMonth() + '月' + thedate.getDay() + '日，星期' + datestring;
+        datelbl.innerHTML = (thedate.getMonth+1) + '月' + thedate.getDate() + '日，星期' + datestring;
     }
 }
 function clicktime() {
