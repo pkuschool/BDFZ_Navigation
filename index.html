@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/materialize.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
 </head>
 
 <body class="grey lighten-3">
@@ -89,14 +92,23 @@
     </div>
     <div class="mainsection centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto">
         <div class="row center-align center centered" id="customarea" style="margin: 0 auto">
-            <div class="btn col white black-text customgrid hoverable waves-effect s2">
+            <button class="btn col white black-text customgrid hoverable waves-effect s2">
                 <img src="./img/webdef.png" class="gridimg">
                 <p class="gridtext">网站</p>
             </div>
-            <div class="btn customgrid white col black-text plus hoverable waves-effect s2">
+            <button data-target="addmodal" class="btn customgrid white col black-text plus hoverable waves-effect s2 modal-trigger">
                 <img src="./img/plus.png" class="gridimg">
                 <p class="gridtext">添加</p>
             </div>
+        </div>
+    </div>
+    <div id="addmodal" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
 </body>
