@@ -7,20 +7,20 @@
     <title>关于 | BDFZ导航</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="./img/nav_favicon.png" rel="icon" type="image/png" sizes="272x272">
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/materialize.js"></script>
     <script src="./js/main.js"></script>
     <script>
-        function gogithub() {
-            window.open('https://github.com/pkuschool/BDFZ_Navigation', '_blank');
+        function gogithub(addup="") {
+            window.open('https://github.com/pkuschool/BDFZ_Navigation/'+addup, '_blank');
         }
     </script>
 </head>
 
 <body class="grey lighten-3">
-    <nav id="container" class="blue-grey darken-1">
+    <nav id="container" class="blue-grey darken-1 hide-on-med-and-down">
         <div class="nav-wrapper blue-grey darken-1" style="margin: 0 auto">
 
             <a href="#" class="brand-logo" style="font-size: 25px;margin-left: 20px;">BDFZ导航</a>
@@ -34,19 +34,35 @@
         </div>
     </nav>
     <div class="container transparent centered">
-        <br class="hide-on-large-and-up" />
-        <button class="btn red darken-4 white-text waves-ripple waves-effect hide-on-large-and-up" onclick="history.back()"><i class="material-icons">home</i></button>
-        <h1>关于</h1>
-        <p>版本 <script>document.write(version);</script></p>
+        <br class="hide-on-large-only" />
+        <div class="row hide-on-large-only" style="vertical-align: middle">
+            <button class="btn blue-grey white-text waves-ripple waves-effect hide-on-large-and-up col" onclick="history.back()"><i class="material-icons left">home</i>返回</button>
+            <span class="col" style="font-size: 30px; margin-top: -5px;padding-right: 0px;">关于</span>
+            <span class="col" style="padding-left:5px;margin-top: 15px;"><script>
+                    document.write(version);
+                </script>
+            </span>
+        </div>
+
+
+        <h1 class="hide-on-med-and-down">关于</h1>
+        <p class="hide-on-med-and-down">版本
+            <script>
+                document.write(version);
+            </script>
+        </p>
         <p>本网站立志于成为北大附中同学与老师的浏览器主页。</p>
-        <h1>开源</h1>
+        <h2>开源</h2>
         <p>此网站已在 <button class="black white-text waves-ripple waves-effect btn-small noround " onclick="gogithub()"> Github
             </button><button class="white black-text waves-ripple waves-effect btn-small noround hide-on-small-and-down"
                 onclick="gogithub()">
                 pkuschool/BDFZ_Navigation </button> 以 MIT License 开源。</p>
-        <h1>开源库使用</h1>
+        <h3>反馈</h3>
+        <p>您可以在GitHub issues 提交反馈与建议。</p>
+        <button onclick="gogithub('issues')" class="btn teal white-text waves-effect waves-light">Issues</button>
+        <h2>开源库使用</h2>
         <p>本项目由于开源库的使用变得可能，以下是本项目代码包括的 Javascript Library：（点击可以进入其项目地址）</p>
-        <div class="collection blue-grey" style="width: 50%;">
+        <div class="collection blue-grey hoverable waves-effect waves-light" style="width: 50%;">
             <a href="https://github.com/Dogfalo/materialize" class="collection-item">
                 <span class="new badge" data-badge-caption="已使用">已修改，</span>
                 Materialize
@@ -60,5 +76,8 @@
     </div>
 
 </body>
-
+<div class=" hiddendiv">
+    <p class="centered large dt clocktitle" id="time-desktop" onclick="clicktime()"></p>
+    <p class="centered dt" id="date-desktop"></p>
+</div>
 </html>

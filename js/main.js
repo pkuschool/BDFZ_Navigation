@@ -1,9 +1,9 @@
-var version = "0.0.2";
+var version = "0.0.3";
 function GoTo(to_url) {
     window.open(to_url, '_blank');
 }
 t = 0;
-window.setInterval(uptime, 1000);
+
 function uptime() {
     var thedate = new Date;
     var timelbl = document.getElementById("time-desktop");
