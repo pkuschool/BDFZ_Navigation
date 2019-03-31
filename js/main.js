@@ -9,6 +9,7 @@ function uptime() {
     var timelbl = document.getElementById("time-desktop");
     var datelbl = document.getElementById("date-desktop");
     var datestring = "";
+
     switch (thedate.getDay()) {
         case 1:
             datestring = '一'
@@ -28,10 +29,11 @@ function uptime() {
         case 6:
             datestring = '六'
             break;
-        case 7:
+        case 0:
             datestring = '日'
             break;
         default:
+            datestring = thedate.getDay();
             break;
     }
     var minstring = "";
