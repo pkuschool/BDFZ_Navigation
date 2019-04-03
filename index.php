@@ -25,7 +25,12 @@
             <a href="#" class="brand-logo titletxt" style="font-size: 25px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="./login.html" style="font-size: 30px;color: aliceblue">登录</a>
+                    <?php
+                        $name=$_GET["username"];
+                        if($name=="") echo ' <a href="./login.html" style="font-size: 30px;color: aliceblue">登录</a>';
+                        else echo "<p style='margin:0;font-size: 30px;color: aliceblue'>$name</p>";
+                    ?>
+                   
                 </li>
                 <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt=""
                             style="margin-top: 20px;" height="25px" width="25px"></a></li>
