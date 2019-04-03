@@ -26,9 +26,20 @@
             <ul class="right hide-on-med-and-down">
                 <li>
                     <?php
-                        $name=$_GET["username"];
-                        if($name=="") echo ' <a href="./login.html" style="font-size: 30px;color: aliceblue">登录</a>';
-                        else echo "<p style='margin:0;font-size: 30px;color: aliceblue'>$name</p>";
+                    error_reporting(0);
+                    $e=0;
+                    try{
+                        if($_GET["username"]){
+                            $name=$_GET["username"];
+                            echo "<p style='margin:0;font-size: 30px;color: aliceblue'>$name</p>";
+                            $e=1;
+                        }
+                        else $e=0;
+                    }
+                    finally{
+                        if($e==0) echo '<a href="./login.html" style="font-size: 30px;color: aliceblue">登录</a>';
+                    }
+                        
                     ?>
                 </li>
                 <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt=""
