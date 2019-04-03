@@ -5,15 +5,16 @@ html{
 .mainsection{
     width: 90%;
     margin: 0 auto;
-}
-.zoom{
-    transition: height .5s;
-    transition: margin .5s;
+
+
 }
 .zoom:hover{
-    height:160px;
-    margin: -5px;
-    background-color: #2bb288;
+    animation: top3hover 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes top3hover{
+    from{height:150px;margin-top: 0px}
+    to{height:155px;margin-top: -3px}
 }
 .yue{
     background-color: #2bb288;
@@ -121,4 +122,20 @@ html{
     .titletxt{
         margin-left: 20px;
     }
+}
+@media only screen and (min-width: 600px) and (max-width: 850px){
+    .gridhide{
+        display: none;
+    }
+}
+.clocktitle{
+    font-size: 75px;
+}
+@media only screen and (min-width: 600px) and (max-width: 760px) {
+    .clocktitle{
+        font-size: 55px;
+    }
+}
+.largeicon{
+    font-size: 50px;
 }

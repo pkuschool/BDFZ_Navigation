@@ -1,13 +1,15 @@
+var version = "0.0.3";
 function GoTo(to_url) {
     window.open(to_url, '_blank');
 }
 t = 0;
-window.setInterval(uptime, 1000);
+
 function uptime() {
     var thedate = new Date;
     var timelbl = document.getElementById("time-desktop");
     var datelbl = document.getElementById("date-desktop");
     var datestring = "";
+
     switch (thedate.getDay()) {
         case 1:
             datestring = '一'
@@ -27,10 +29,11 @@ function uptime() {
         case 6:
             datestring = '六'
             break;
-        case 7:
+        case 0:
             datestring = '日'
             break;
         default:
+            datestring = thedate.getDay();
             break;
     }
     var minstring = "";
@@ -45,12 +48,12 @@ function uptime() {
     } else {
         secstring = thedate.getSeconds().toString();
     }
-    if (document.body.clientWidth <= 992) {
+    if (document.body.clientWidth <= 1125) {
         timelbl.innerHTML = thedate.getHours() + ':' + minstring;
         datelbl.innerHTML = '星期' + datestring;
     } else {
         timelbl.innerHTML = thedate.getHours() + ':' + minstring + ":" + secstring;
-        datelbl.innerHTML = thedate.getMonth() + '月' + thedate.getDay() + '日，星期' + datestring;
+        datelbl.innerHTML = (thedate.getMonth()+1) + '月' + thedate.getDate() + '日，星期' + datestring;
     }
 }
 function clicktime() {

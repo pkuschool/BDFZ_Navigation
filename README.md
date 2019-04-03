@@ -12,16 +12,21 @@ The ultimate navigator for BDFZ.
 
 ## Contribute 准则
 - 所有较大的样式 Override，都放到 /css/main.css
+- materialize.css的更改必须与原脚本有关且具有泛用性。
 - 所有JS代码，都放到 /js/main.js，建议使用Function
 - 在开始编辑样式之前，请确认您已经阅读过 Materialize 的大多数 [documentation](materializecss.com/)。
 - 请使用能让人看懂的JS变量名。
 - 有什么BUG/建议可以去开[issue](https://github.com/pkuschool/BDFZ_Navigation/issues)。
-- 本网站以静态html为主，等待有人真的开始写PHP。
+- 本网站以静态html为主，预计不会加入PHP支持。
 
 ## Contributors & Acknowledgement
 - @smallg0at - 项目发起人
 - @cxchhh(cxccxc) - 主要编辑者
 - @suenyu - idea
+
+## 使用的库文件
+- [Materialize](https://github.com/Dogfalo/materialize)
+- [cookie-js](https://github.com/js-cookie/js-cookie)
 
 ## 如何加入核心 Contributor 名单
 成为核心 Contributor 可以使你拥有直接push的权限。

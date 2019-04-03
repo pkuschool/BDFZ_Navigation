@@ -9,19 +9,28 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <link href="./img/nav_favicon.png" rel="icon" type="image/png" sizes="272x272">
     <script src="./js/materialize.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        M.AutoInit();
+        window.setInterval(uptime, 1000);
+    </script>
 </head>
 
-<body class="red lighten-4">
+<body class="grey lighten-3">
 
-    <nav id="container" class="red darken-4">
-        <div class="nav-wrapper red darken-4" >
-            <a href="#" class="brand-logo hide-on-med-and-up"><img src="./img/BDFZ.png" style="width: 45px;height:45px;margin-top: 5px;"></a>
-            <a href="#" class="brand-logo hide-on-small-and-down titletxt" style="font-size: 25px;">BDFZ导航</a>
+    <nav id="container" class="blue-grey darken-1">
+        <div class="nav-wrapper blue-grey darken-1" >
+            <a href="#" class="brand-logo titletxt" style="font-size: 25px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.ico" alt=""
+                <li>
+                    <a href="http://172.16.190.37/login.html" style="font-size: 30px;color: aliceblue">登录</a>
+                </li>
+                <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt=""
                             style="margin-top: 20px;" height="25px" width="25px"></a></li>
+                <li><a href="https://github.com/pkuschool/BDFZ_Navigation/issues/new/choose"><i
+                            class="material-icons">feedback</i></a></li>
                 <li><a href="./about.html"><i class="material-icons">info</i></a></li>
             </ul>
         </div>
@@ -35,10 +44,10 @@
                     <p class="large-plate hide-on-small-and-down">希悦</p>
                 </div>
             </div>
-            <div class="col s4  c_main">
-                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_clock z-depth-2 hoverable zoom"
+            <div class="col s4 c_main">
+                <div class="btn grey darken-3 white-text waves-ripple waves-effect col s12 c_clock z-depth-2 hoverable zoom"
                     onclick="window.open('clock.html','_self')">
-                    <p class="centered large dt" id="time-desktop" style="font-size: 75px;" onclick="clicktime()"></p>
+                    <p class="centered large dt clocktitle" id="time-desktop" onclick="clicktime()"></p>
                     <p class="centered dt" id="date-desktop"></p>
                     <script>
                         uptime();
@@ -50,16 +59,9 @@
                 <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 office hoverable zoom"
                     onclick="GoTo('https://portal.office.com')">
                     <img class="img" src="./img/office.png" height="100px" width="auto">
-                    <p class="large-plate hide-on-small-and-down">Office 365</p>
+                    <p class="large-plate hide-on-small-and-down">O<span class="gridhide">ffice </span>365</p>
                 </div>
             </div>
-            <div class="col s4  c_main">
-                    <div class="btn yue darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 hoverable zoom"
-                        onclick="GoTo('http://sj2020.bdfz.seiue.com/')">
-                        <img class="img" src="./img/yueshijian.png" height="100px" width="auto">
-                        <p class="large-plate hide-on-small-and-down">悦实践</p>
-                    </div>
-                </div>
         </div>
         <div class="row hide-on-med-and-up mobile-view"> <!--Top 3, Mobile-->
             <div class="col s12 c_main_m">
@@ -95,14 +97,23 @@
     </div>
     <div class="mainsection centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto">
         <div class="row center-align center centered" id="customarea" style="margin: 0 auto">
-            <div class="btn col white black-text customgrid hoverable waves-effect s2">
+            <button class="btn col white black-text customgrid hoverable waves-effect s2">
                 <img src="./img/webdef.png" class="gridimg">
                 <p class="gridtext">网站</p>
             </div>
-            <div class="btn customgrid white col black-text plus hoverable waves-effect s2">
+            <button data-target="addmodal" class="btn customgrid white col black-text plus hoverable waves-effect s2 modal-trigger">
                 <img src="./img/plus.png" class="gridimg">
                 <p class="gridtext">添加</p>
             </div>
+        </div>
+    </div>
+    <div id="addmodal" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>
 </body>
