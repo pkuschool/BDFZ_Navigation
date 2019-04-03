@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // 使用 IntelliSense 了解相关属性。 
+=======
+    // 使用 IntelliSense 了解相关属性。
+>>>>>>> 784a2eb42fbe99ab3edec6b5196740a7db2f2380
 =======
     // 使用 IntelliSense 了解相关属性。
 >>>>>>> 784a2eb42fbe99ab3edec6b5196740a7db2f2380
@@ -8,6 +12,7 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+<<<<<<< HEAD
 <<<<<<< HEAD
         {
             "name": "(Windows) Launch",
@@ -20,6 +25,8 @@
             "environment": [],
             "externalConsole": true
 =======
+=======
+>>>>>>> 784a2eb42fbe99ab3edec6b5196740a7db2f2380
 
         {
             "type": "edge",
@@ -27,6 +34,9 @@
             "name": "启动 Edge 并打开 localhost",
             "url": "http://localhost",
             "webRoot": "${workspaceFolder}"
+<<<<<<< HEAD
+>>>>>>> 784a2eb42fbe99ab3edec6b5196740a7db2f2380
+=======
 >>>>>>> 784a2eb42fbe99ab3edec6b5196740a7db2f2380
         }
     ]
