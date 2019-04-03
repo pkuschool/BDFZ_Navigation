@@ -12,10 +12,9 @@
     mysqli_query($conn,"use userinfo");
     $sql="select * from info where user='$user'";
     $res=mysqli_query($conn,$sql);
-
     mysqli_close($conn);
 ?>
-    <meta http-equiv="refresh" content="2;url=./index.php?username=<?php echo $user;?>" />
+    <meta http-equiv="refresh" content='2;url=./index.php?username=<?php echo "$user";?>' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>正在登录...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +23,7 @@
 </head>
 <body>
     <div class="container">
-        
+        <p class="centered">
     
     <?php
         if(mysqli_num_rows($res)){
@@ -41,6 +40,6 @@
     echo "登录成功！<br />";
     echo $user; 
 
-    ?></div>
+    ?></p></div>
 </body>
 </html>
