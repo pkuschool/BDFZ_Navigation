@@ -24,16 +24,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="spinner-layer spinner-red">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div>
+        
+    
     <?php
         if(mysqli_num_rows($res)){
             $row=mysqli_fetch_row($res);
@@ -49,6 +41,6 @@
     echo "登录成功！<br />";
     echo $user; 
 
-    ?>
+    ?></div>
 </body>
 </html>
