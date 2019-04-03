@@ -8,21 +8,29 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/materialize.css">
 </head>
 
-<body>
-    <div class=" ">
-        <form action="login.php" method="GET">
-            <div class="input-field col s3">
-                <input id="user" name="user" type="text" placeholder="用户名" />
+<body class="teal" >
+    <div class="container" style="margin-top: 150px;">
+        <button class="btn waves-effect waves-light" onclick="history.back(-1)">返回</button>
+        <form action="login.php" method="POST" class="card-panel white teal-text" >
+            <h1 style="margin-left: 5px;margin-top: 10px;">登录</h1>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="user" name="user" type="text" class="validate" required>
+                    <label for="first_name">用户名</label>
+                </div>
             </div>
-            <div class="input-field col s3">
-                <input id="pwd" name="pwd" type="password" placeholder="密码" />
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="pwd" name="pwd" type="password" class="validate" required>
+                    <label for="pwd">密码</label> <!--这是干啥-->
+                </div>
             </div>
-            <div>
-                <input type="submit" value="登录" />
+            <div class="row">
+                <button type="submit" class="btn col" style="margin-right: 20px;">登录</button>&nbsp;&nbsp;
+                <button onclick="window.open('./reg.html', '_self')" class="btn col">去注册</button>
             </div>
         </form>
         <br />
-        <a href="reg.html">去注册</a>
     </div>
 </body>
 

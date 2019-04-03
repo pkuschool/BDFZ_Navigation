@@ -25,4 +25,5 @@ $sql="insert into info(user,pwd,li,website) values('$user','$pwd','$li','$websit
 mysqli_query($conn,$sql);
 echo "注册成功";
 mysqli_close($conn);
+
 ?>
