@@ -1,50 +1,54 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>register</title>
-        <link rel="stylesheet" href="./css/materialize.css">
-        <script src="./js/materialize.js"></script>
-    </head>
-    <body class="blue-grey">
-        <div class="container" style="margin-top: 150px;">
-            <button onclick="window.open('index.php','_self')" class=" btn blue-grey white-text">返回</button>
-            <div class="card-panel white">
-                <h1 style="margin-left: 5px;margin-top: 10px;" class="blue-grey-text">注册</h1>
-                <form action="reg.php" method="GET">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="user" name="user" type="text" class="validate" required>
-                            <label for="user">用户名</label>
-                        </div>
+
+<head>
+    <meta charset="utf-8" />
+    <title>register</title>
+    <link rel="stylesheet" href="./css/materialize.css">
+    <script src="./js/materialize.js"></script>
+</head>
+
+<body class="blue-grey">
+    <div class="container" style="margin-top: 150px;">
+        <button onclick="window.open('index.php','_self')" class=" btn blue-grey white-text">返回</button>
+        <div class="card-panel white">
+            <h1 style="margin-left: 5px;margin-top: 10px;" class="blue-grey-text">注册</h1>
+            <form action="reg.php" method="POST">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="user" name="user" type="text" class="validate" required>
+                        <label for="user">用户名</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="pwd" name="pwd" type="password" class="validate" required>
-                            <label for="pwd">密码</label> <!--这是干啥-->
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="pwd" name="pwd" type="password" class="validate" required>
+                        <label for="pwd">密码</label>
+                        <!--这是干啥-->
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="li" name="li" type="text">
-                            <label for="li">网站序号</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="li" name="li" type="text">
+                        <label for="li">网站序号</label>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="website" name="website" type="text" >
-                            <label for="first_name">网站列表</label>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="website" name="website" type="text">
+                        <label for="first_name">网站列表</label>
                     </div>
-                    <button type="submit" class="btn blue">
-                        注册
-                    </button>&nbsp;&nbsp;
-                    <button onclick="window.open('login.html','_self')" class="btn blue-grey">
-                        去登录
-                    </button>
-        </form>
-            </div>
+                </div>
+                <button type="submit" class="btn blue">
+                    注册
+                </button>&nbsp;&nbsp;
+                <button onclick="window.open('login.html','_self')" class="btn blue-grey">
+                    去登录
+                </button>
+            </form>
         </div>
-        
-    </body>
+    </div>
+
+</body>
+
 </html>
