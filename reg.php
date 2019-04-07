@@ -1,16 +1,17 @@
 <?php
 //phpinfo();
+$e=1;
 $user=$_GET["user"];
 $pwd=$_GET["pwd"];
 $li=$_GET["li"];
 $website=$_GET["website"];
 if($user==null){
     echo "用户名不能为空";
-    exit;
+    $e=0;
 }
 if($pwd==null){
     echo "密码不能为空";
-    exit;
+    $e=0;
 }
 include_once "dbpwd.php";
 $conn=mysqli_connect("114.115.146.81:3306","root", $dbpwd);
@@ -19,11 +20,11 @@ $sql="select * from info where user='$user'";
 $res=mysqli_query($conn,$sql);
 if(mysqli_num_rows($res)){
     echo "用户名已存在";
-    exit;
+    $e=0;
 }
 $sql="insert into info(user,pwd,li,website) values('$user','$pwd','$li','$website')";
 mysqli_query($conn,$sql);
-echo "注册成功";
+if($e==1)echo "注册成功";
 mysqli_close($conn);
-
 ?>
+<meta http-equiv="refresh" content='2;url=./index.php<?php if($e==1)echo "?username=$user";?>' />

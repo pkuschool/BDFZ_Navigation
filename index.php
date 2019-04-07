@@ -29,15 +29,15 @@
                     error_reporting(0);
                     $e=0;
                     try{
-                        if($_GET["username"]){
-                            $name=$_GET["username"];
-                            echo "<p style='margin:0;font-size: 30px;color: aliceblue'>$name</p>";
+                        if($_POST["username"]){
+                            $name=$_POST["username"];
+                            echo "<p style='margin:0;font-size: 20px;'>$name</p>";
                             $e=1;
                         }
                         else $e=0;
                     }
                     finally{
-                        if($e==0) echo '<a href="./login.html" style="font-size: 30px;color: aliceblue">登录</a>';
+                        if($e==0) echo '<a href="./login.html" style="font-size: 24px;font-weight: 350">登录/注册</a>';
                     }
                         
                     ?>
