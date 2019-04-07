@@ -36,9 +36,11 @@
     <div class="container center center-align center-block centered">
         <h1 class="white-text" style="margin-top: 150px; text-shadow: 1px 1px light-grey"><?php echo $msg;?></h1>
     </div>
+    <form method="POST" style="display:none" action="index.php" id="f1" enctype="multipart/form-data">
+        <input name="username" style="display:none" type="text" value="<?php echo $user;?>"/>
+    </form> 
     <script>
-        $.post("./index.php",(username:<?php if($e==1)echo $user;?>),function(data,textStatus){});
-        
+        setTimeout("$('#f1').submit()",2000);
     </script>
     
 </body>

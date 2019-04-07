@@ -27,4 +27,14 @@ mysqli_query($conn,$sql);
 if($e==1)echo "注册成功";
 mysqli_close($conn);
 ?>
-<meta http-equiv="refresh" content='2;url=./index.php<?php if($e==1)echo "?username=$user";?>' />
+<!doctype html>
+<html>
+    <body>
+    <form method="POST" style="display:none" action="index.php" id="f1" enctype="multipart/form-data">
+        <input name="username" style="display:none" type="text" value="<?php echo $user;?>"/>
+    </form> 
+    <script>
+        setTimeout("$('#f1').submit()",2000);
+    </script>
+</body>
+    </html>

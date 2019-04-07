@@ -16,6 +16,9 @@
         function gogithub(addup="") {
             window.open('https://github.com/pkuschool/BDFZ_Navigation/'+addup, '_blank');
         }
+        function goforms() {
+            window.open('https://forms.office.com/Pages/ResponsePage.aspx?id=dvGcSe515EmAwVKvzSjStSu0qAPfyLFHpQswwtOvyUNURTBLWkxMTTdYNFBLMkFVT1pEOFVCM0lINi4u','_blank')
+        }
     </script>
 </head>
 
@@ -58,8 +61,10 @@
                 onclick="gogithub()">
                 pkuschool/BDFZ_Navigation </button> 以 MIT License 开源。</p>
         <h3>反馈</h3>
-        <p>您可以在GitHub issues 提交反馈与建议。</p>
-        <button onclick="gogithub('issues')" class="btn teal white-text waves-effect waves-light">Issues</button>
+        <p>建议在GitHub issues 提交反馈与建议。</p>
+        <p>如果您没有GitHub帐号,您也可以选择Forms反馈>.</p>
+        <button onclick="gogithub('issues')" class="btn black white-text waves-effect waves-light">Issues</button>
+        <button onclick="goforms()" class="btn teal white-text waves-effect waves-light">Forms</button>
         <h2>开源库使用</h2>
         <p>本项目由于开源库的使用变得可能，以下是本项目代码包括的 Javascript Library：（点击可以进入其项目地址）</p>
         <div class="collection blue-grey hoverable waves-effect waves-light" style="width: 50%;">
