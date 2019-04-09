@@ -31,6 +31,7 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.form.js"></script>
     <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="blue-grey">
     <div class="container center center-align center-block centered">
@@ -38,11 +39,10 @@
     </div>
     <form method="POST" style="display:none" action="index.php" id="f1" enctype="multipart/form-data">
         <input name="username" style="display:none" type="text" value="<?php echo $user;?>"/>
-    </form> 
+    </form>
     <script>
         setTimeout("$('#f1').submit()",2000);
     </script>
-    
+
 </body>
 </html>
-  

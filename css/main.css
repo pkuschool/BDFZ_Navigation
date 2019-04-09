@@ -117,6 +117,10 @@ html{
     margin-top: -5px;
     line-height: 1em;
     font-size: 20px;
+    font-family: '思源黑体',
+    'Segoe UI',
+    'Pingfang UI';
+    font-weight: 350;
 }
 @media only screen and (min-width: 993px) {
     .titletxt{
