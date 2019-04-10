@@ -25,7 +25,7 @@ if(mysqli_num_rows($res)){
     $e=0;
 }
 $sql="insert into info(user,pwd,li,website) values('$user','$pwd','$li','$website')";
-mysqli_query($conn,$sql);
+if($e==1)mysqli_query($conn,$sql);
 if($e==1) $msg="注册成功";
 mysqli_close($conn);
 ?>
@@ -45,10 +45,10 @@ mysqli_close($conn);
     </form> 
     <script>
         <?php
-        if($e==0) echo "window.location.href='reg.html'";
-        else echo "setTimeout('$('#f1').submit()',2000)";
+        $str="window.location.href='reg.html'";
+        if($e==0) echo "setTimeout($str,2000);";
+        else echo 'setTimeout("$("#f1").submit()",50000);';
         ?>
-       ;
     </script>
 </body>
 </html>
