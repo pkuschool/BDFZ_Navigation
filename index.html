@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link href="./img/nav_favicon.png" rel="icon" type="image/png" sizes="272x272">
     <script src="./js/materialize.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
         M.AutoInit();
@@ -21,47 +22,42 @@
 <body class="grey lighten-3">
 
     <nav id="container" class="blue-grey darken-1">
-        <div class="nav-wrapper blue-grey darken-1" >
+        <div class="nav-wrapper blue-grey darken-1">
             <a href="#" class="brand-logo titletxt" style="font-size: 25px;">BDFZ导航</a>
             <ul class="right hide-on-med-and-down">
                 <li>
                     <?php
                     error_reporting(0);
-                    $e=0;
-                    try{
-                        if($_POST["username"]){
-                            $name=$_POST["username"];
+                    $e = 0;
+                    try {
+                        if ($_POST["username"]) {
+                            $name = $_POST["username"];
                             echo "<p style='margin:0;font-size: 20px;'>$name</p>";
-                            $e=1;
-                        }
-                        else $e=0;
+                            $e = 1;
+                        } else $e = 0;
+                    } finally {
+                        if ($e == 0) echo '<a href="./login.html" style="font-size: 24px;font-weight: 350">登录/注册</a>';
                     }
-                    finally{
-                        if($e==0) echo '<a href="./login.html" style="font-size: 24px;font-weight: 350">登录/注册</a>';
-                    }
-                        
+
                     ?>
                 </li>
-                <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt=""
-                            style="margin-top: 20px;" height="25px" width="25px"></a></li>
-                <li><a href="https://github.com/pkuschool/BDFZ_Navigation/issues/new/choose"><i
-                            class="material-icons">feedback</i></a></li>
+                <li><a href="https://github.com/pkuschool/BDFZ_Navigation"><img src="./img/github.png" alt="" style="margin-top: 20px;" height="25px" width="25px"></a></li>
+                <li><a href="https://github.com/pkuschool/BDFZ_Navigation/issues/new/choose"><i class="material-icons">feedback</i></a></li>
                 <li><a href="./about.html"><i class="material-icons">info</i></a></li>
             </ul>
         </div>
     </nav>
     <div style="margin-top: 20px;" class="mainsection" id="top3">
-        <div class="row hide-on-small-and-down"><!--Top 3, large-->
+        <div class="row hide-on-small-and-down">
+            <!--Top 3, large-->
             <div class="col s4 c_main">
-                <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 hoverable zoom"
-                    onclick="GoTo('https://bdfz.seiue.com')">
+                <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 hoverable zoom" onclick="GoTo('https://bdfz.seiue.com')">
                     <img class="img" src="./img/seiue.png" height="100px" width="auto">
                     <p class="large-plate hide-on-small-and-down">希悦</p>
                 </div>
             </div>
             <div class="col s4 c_main">
-                <div class="btn grey darken-3 white-text waves-ripple waves-effect col s12 c_clock z-depth-2 hoverable zoom"
-                    onclick="window.open('clock.html','_self')">
+                <div class="btn grey darken-3 white-text waves-ripple waves-effect col s12 c_clock z-depth-2 hoverable zoom" onclick="window.open('clock.html','_self')">
                     <p class="centered large dt clocktitle" id="time-desktop" onclick="clicktime()"></p>
                     <p class="centered dt" id="date-desktop"></p>
                     <script>
@@ -71,43 +67,39 @@
                 </div>
             </div>
             <div class="col s4  c_main">
-                <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 office hoverable zoom"
-                    onclick="GoTo('https://portal.office.com')">
+                <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full z-depth-2 office hoverable zoom" onclick="GoTo('https://portal.office.com')">
                     <img class="img" src="./img/office.png" height="100px" width="auto">
                     <p class="large-plate hide-on-small-and-down">O<span class="gridhide">ffice </span>365</p>
                 </div>
             </div>
         </div>
-        <div class="row hide-on-med-and-up mobile-view"> <!--Top 3, Mobile-->
+        <div class="row hide-on-med-and-up mobile-view">
+            <!--Top 3, Mobile-->
             <div class="col s12 c_main_m">
-                <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2"
-                    onclick="GoTo('https://bdfz.seiue.com')">
+                <div class="btn blue lighten-1 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2" onclick="GoTo('https://bdfz.seiue.com')">
                     <img class="img_m" src="./img/seiue.png" height="100px" width="auto">
                     <p class="large-plate ">希悦</p>
                 </div>
             </div>
             <div class="col s12  c_main_m">
-                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2"
-                    onclick="GoTo('http://www.pkuschool.edu.cn')">
+                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2" onclick="GoTo('http://www.pkuschool.edu.cn')">
 
                     <img class="img_m" src="./img/BDFZ.png" height="100px" width="auto">
                     <p class="large-plate">官网</p>
                 </div>
             </div>
             <div class="col s12  c_main_m">
-                <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2 office"
-                    onclick="GoTo('https://portal.office.com')">
+                <div class="btn deep-orange darken-1 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2 office" onclick="GoTo('https://portal.office.com')">
                     <img class="img_m" src="./img/office.png" height="100px" width="auto">
                     <p class="large-plate">Office 365</p>
                 </div>
             </div>
             <div class="col s12  c_main">
-                    <div class="btn yue darken-1 white-text waves-ripple waves-effect col s12 c_full c_full_minus z-depth-2"
-                        onclick="GoTo('http://sj2020.bdfz.seiue.com/')">
-                        <img class="img" src="./img/yueshijian.png" height="100px" width="auto">
-                        <p class="large-plate">悦实践</p>
-                    </div>
+                <div class="btn yue darken-1 white-text waves-ripple waves-effect col s12 c_full c_full_minus z-depth-2" onclick="GoTo('http://sj2020.bdfz.seiue.com/')">
+                    <img class="img" src="./img/yueshijian.png" height="100px" width="auto">
+                    <p class="large-plate">悦实践</p>
                 </div>
+            </div>
         </div>
     </div>
     <div class="mainsection centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto">
@@ -115,12 +107,12 @@
             <button class="btn col white black-text customgrid hoverable waves-effect s2">
                 <img src="./img/webdef.png" class="gridimg">
                 <p class="gridtext">网站</p>
-            </div>
-            <button data-target="addmodal" class="btn customgrid white col black-text plus hoverable waves-effect s2 modal-trigger">
-                <img src="./img/plus.png" class="gridimg">
-                <p class="gridtext">添加</p>
-            </div>
         </div>
+        <button data-target="addmodal" class="btn customgrid white col black-text plus hoverable waves-effect s2 modal-trigger">
+            <img src="./img/plus.png" class="gridimg">
+            <p class="gridtext">添加</p>
+    </div>
+    </div>
     </div>
     <div id="addmodal" class="modal">
         <div class="modal-content">
