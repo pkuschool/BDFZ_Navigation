@@ -13,10 +13,6 @@
     <script src="./js/materialize.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <script src="./js/main.js"></script>
-    <script>
-        M.AutoInit();
-        window.setInterval(uptime, 1000);
-    </script>
 </head>
 
 <body class="grey lighten-3">
@@ -66,10 +62,10 @@
                 </div>
             </div>
             <div class="col s12  c_main_m">
-                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2" onclick="GoTo('http://www.pkuschool.edu.cn')">
+                <div class="btn red darken-4 white-text waves-ripple waves-effect col s12 c_full_minus z-depth-2" onclick="GoTo('http://bdfz-cas.pkuschool.edu.cn')">
 
                     <img class="img_m" src="./img/BDFZ.png" height="100px" width="auto">
-                    <p class="large-plate">官网</p>
+                    <p class="large-plate">单点登录</p>
                 </div>
             </div>
             <div class="col s12  c_main_m">
@@ -86,27 +82,32 @@
             </div>
         </div>
     </div>
-    <div class="mainsection centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto">
-        <div class="row center-align center centered" id="customarea" style="margin: 0 auto">
-            <button class="btn col white black-text customgrid hoverable waves-effect s2">
-                <img src="./img/webdef.png" class="gridimg">
-                <p class="gridtext">网站</p>
-        </div>
-        <button data-target="addmodal" class="btn customgrid white col black-text plus hoverable waves-effect s2 modal-trigger">
-            <img src="./img/plus.png" class="gridimg">
-            <p class="gridtext">添加</p>
+    <div class="mainsection row centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto" >
+        <second-grid id="grid002" v-for="item in weblist" v-bind:grid="item"></second-grid>
     </div>
     </div>
-    </div>
-    <div id="addmodal" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
     </div>
 </body>
+<script>
+    M.AutoInit();
+    window.setInterval(uptime, 1000);
+    Vue.component('second-grid', {
+        props: ['grid'],
+        template: '<button class="btn customgrid white col black-text plus hoverable waves-effect s2 centered" v-on:click="GoTo(grid.url)"><img class="gridimg" v-bind:src="grid.gridimg"><p class="gridtext">{{ grid.gridtext }}</p></button>'
+    })
+    var grid2 = new Vue({
+        el: '#grid002',
+        data: {
+            weblist: [
+                { gridimg: 'img/BDFZ.png', gridtext: '单点登录', url: 'https://bdfz-cas.pkuschool.edu.cn'}
+            ]
+        },
+        methods:{
+            clicklink: function(){
+                GoTo(this.url)
+            }
+        }
+    })
+</script>
 
 </html>
