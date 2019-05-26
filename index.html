@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link href="./img/nav_favicon.png" rel="icon" type="image/png" sizes="272x272">
     <script src="./js/materialize.js"></script>
-    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
@@ -83,7 +83,7 @@
         </div>
     </div>
     <div class="mainsection row centered center center-align hide-on-small-and-down" style="margin-top: 20px;margin: 0 auto" >
-        <second-grid id="grid002" v-for="item in weblist" v-bind:grid="item"></second-grid>
+        <second-grid id="grid002" v-for="item in weblist"></second-grid>
     </div>
     </div>
     </div>
@@ -92,14 +92,16 @@
     M.AutoInit();
     window.setInterval(uptime, 1000);
     Vue.component('second-grid', {
-        props: ['grid'],
-        template: '<button class="btn customgrid white col black-text plus hoverable waves-effect s2 centered" v-on:click="GoTo(grid.url)"><img class="gridimg" v-bind:src="grid.gridimg"><p class="gridtext">{{ grid.gridtext }}</p></button>'
+        template: '<button class="btn customgrid white col black-text plus hoverable waves-effect s2 centered" v-on:click="GoTo(item.url)"><img class="gridimg" v-bind:src="item.gridimg"><p class="gridtext">{{ item.gridtext }}</p></button>'
     })
     var grid2 = new Vue({
         el: '#grid002',
         data: {
             weblist: [
-                { gridimg: 'img/BDFZ.png', gridtext: '单点登录', url: 'https://bdfz-cas.pkuschool.edu.cn'}
+                { id: 0, gridimg: 'img/BDFZ.png', gridtext: '单点登录', url: 'https://bdfz-cas.pkuschool.edu.cn'},
+                { id: 1, gridimg: 'img/BDFZ.png', gridtext: '内网登录', url: 'https://portal.pkuschool.edu.cn'},
+                { id: 2, gridimg: 'img/BDFZ.png', gridtext: '校内邮箱', url: 'https://mail.pkuschool.edu.cn'},
+                { id: 3 ,gridimg: 'img/BDFZ.png', gridtext: 'OA系统', url: 'https://oa.pkuschool.edu.cn'}
             ]
         },
         methods:{
